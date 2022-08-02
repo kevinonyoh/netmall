@@ -1,0 +1,25 @@
+<%- include("header") %> 
+<div class="upload-container">
+ <form action="/admin-upload" enctype="multipart/form-data" method="post">
+    <h3 style="margin-top: 20px;">Upload a product</h3>
+    <label for="">Name of product</label>
+    <input type="text" name="name" required>
+    <hr style="border-top: none;">
+    <label for="">price of product</label>
+    <input type="number" name="price" required>
+    <hr style="border-top: none;">
+    <label for="">product quantity</label>
+    <input type="number" name="quantity" required>
+    <hr style="border-top: none;">
+    <hr style="border-top: none;">
+    <label for="">product description</label>
+    <textarea name="description" cols="30" rows="10"></textarea>
+    <hr style="border-top: none;">
+    <label for="">Image of product</label>
+    <input type="file" name="image" required>
+    <hr style="border-top: none;">
+    <input type="submit" value="submit">
+ </form>
+</div>
+
+<%- include("footer") %> 

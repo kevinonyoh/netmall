@@ -1,6 +1,31 @@
 
 <%- include("header") %> 
+<div class="container-side">  
+<div class="side left">
+    <img src="./bag.jpg" alt="bag" id="bagImage">
+  </div>
+  <div class="side right">
+    <h3 class="caption overflow-visible">Help you get your dream item with eazy</h3>
+    <p class="small-text">Always giving the best item you can dream of</p>
+    <button class="btn sign-up">Sign up</button>
+    <button class="btn login">Login</button>
+  </div>
+</div>
 
-<h1>Hello world!</h1>
+<h3 class="product-header overflow-visible">Product</h3>
+  <div id="productGrid"> 
+<div class="container">
+  <div class="row">
+   <% data.forEach(val => { %> 
+    <div class="product-item col-md-3">
+      <img src="<%= val.url %>" alt="<%= val.name %>" srcset="">
+       <h3 class="overflow-visible"><%= val.name %></h3>
+        <p>₦ <%= val.price %></p>
+        <a href="/product/<%= val.cloudinary_id %> "><button class="items-btn">View</button></a>
+     </div>
+    <% }) %> 
+  </div>
+</div>
 
+</div>
 <%- include("footer") %> 
